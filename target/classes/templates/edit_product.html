@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Serum Magique</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+    <div class="container">
+        <h1>Editar Producto</h1>
+        <form th:action="@{'/edit/' + ${product.id}}" th:object="${product}" method="post">
+            <input type="text" th:field="*{name}" placeholder="Nombre" required />
+            <input type="text" th:field="*{description}" placeholder="Descripción" required />
+            <input type="number" step="0.01" th:field="*{price}" placeholder="Precio" required />
+            <input type="text" th:field="*{imageUrl}" placeholder="URL Imagen" required />
+            <button type="submit">Guardar Cambios</button>
+        </form>
+        <a href="/">Volver</a>
+    </div>
+</body>
+</html>

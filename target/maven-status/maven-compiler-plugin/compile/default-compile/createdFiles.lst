@@ -1,0 +1,5 @@
+com\virtualstore\repository\ProductRepository.class
+com\virtualstore\controller\ProductController.class
+com\virtualstore\service\ProductService.class
+com\virtualstore\model\Product.class
+com\virtualstore\VirtualStoreApplication.class
